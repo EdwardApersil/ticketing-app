@@ -1,4 +1,3 @@
-# filepath: /Users/edwardapersil/Desktop/ticketing-app/infra/k8s/auth-srv.yaml
 apiVersion: v1
 kind: Service
 metadata:
