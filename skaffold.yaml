@@ -1,14 +1,8 @@
 apiVersion: skaffold/v2alpha3
-kind: Config 
-deploy:
-  kubectl:
-    manifests:
-      - ./infra/k8s/*
+kind: Config
 build:
-  local:
-    push: false
   artifacts:
-    - image: 4a016dc527a64aa6878705b0c2b7055eeebe7142f4e467544452b665964dd054/auth
+    - image: edwardapersil/auth
       context: auth
       docker:
         dockerfile: Dockerfile
@@ -16,4 +10,7 @@ build:
         manual:
           - src: 'src/**/*.ts'
             dest: .
-  
+deploy:
+  kubectl:
+    manifests:
+      - ./infra/k8s/*
