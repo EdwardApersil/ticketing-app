@@ -1,4 +1,3 @@
-// filepath: /Users/edwardapersil/Desktop/ticketing-app/auth/src/index.ts
 import express from 'express';
 import 'express-async-errors'
 import { json } from 'body-parser';
